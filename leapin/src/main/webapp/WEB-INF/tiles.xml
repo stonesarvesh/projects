@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base" template="/views/layout/layout.jsp">
+		<put-attribute name="header" value="/views/layout/header.jsp" />
+		<put-attribute name="sidebar" value="" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/views/layout/footer.jsp" />
+	</definition>
+	
+	<definition name="home" extends="base">
+		<put-attribute name="content" value="/views/common/searchHome.jsp"/>
+	</definition>
+	
+	<definition name="searchResult" extends="base">
+		<put-attribute name="content" value="/views/common/searchResult.jsp"/>
+		<put-attribute name="sidebar" value="/views/layout/sidebar.jsp" />
+	</definition>
+	
+</tiles-definitions>
