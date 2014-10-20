@@ -1,10 +1,9 @@
 package com.leapin.model;
 
-import java.util.Arrays;
 
 public class Program {
-	private String name;//
-	//private Course[] courses;//
+	private String courseName;//
+	private String majorCategory;//
 	private String level;//
 	private String degree;//
 	private String seats;//
@@ -20,13 +19,10 @@ public class Program {
 	private String accomodationInfo;//
 	private String link;//
 	private String instituteName;
-	//private City city;
+	private String city;
 	private String state;
 	private String instituteLink;
-//	private Date createdOn;
-//	private Date updatedOn;
-//	private String createdBy;
-//	private String updatedBy;
+
 	
 	/**
 	 * @return the instituteName
@@ -124,18 +120,7 @@ public class Program {
 //	public void setUpdatedBy(String updatedBy) {
 //		this.updatedBy = updatedBy;
 //	}
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+
 //	/**
 //	 * @return the courses
 //	 */
@@ -315,6 +300,42 @@ public class Program {
 	 */
 	public void setLink(String link) {
 		this.link = link;
+	}
+	/**
+	 * @return the courseName
+	 */
+	public String getCourseName() {
+		return courseName;
+	}
+	/**
+	 * @param courseName the courseName to set
+	 */
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+	/**
+	 * @return the majorCategory
+	 */
+	public String getMajorCategory() {
+		return majorCategory;
+	}
+	/**
+	 * @param majorCategory the majorCategory to set
+	 */
+	public void setMajorCategory(String majorCategory) {
+		this.majorCategory = majorCategory;
+	}
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
 	}
 	
 //	/* (non-Javadoc)

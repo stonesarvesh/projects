@@ -20,3 +20,5 @@ create table program (
   fee varchar(50) default 'NA' ,
   accomodation varchar(100) default 'NA'
 );
+
+ALTER TABLE program ADD FULLTEXT (course_name,major_category,institute_name,program_level,degree_offered,program_type,city,state);
