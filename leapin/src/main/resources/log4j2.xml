@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="MyApp" packages="com.mobileum">
+  <Appenders>
+   <RollingFile name="RollingFile" fileName="/home/sarvesh/Llogs/application.log" 
+     filePattern="/home/sarvesh/Llogs/application-%d{MM-dd-yyyy}.log">
+
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} %m%n</Pattern>
+      </PatternLayout>
+      <TimeBasedTriggeringPolicy />
+    </RollingFile>
+    
+    <Async name="rollingFileAppender">
+      <AppenderRef ref="RollingFile"/>
+    </Async>
+  </Appenders>
+  <Loggers>
+    <Root level="trace">
+      <AppenderRef ref="rollingFileAppender"/>
+    </Root>
+  </Loggers>
+</Configuration>

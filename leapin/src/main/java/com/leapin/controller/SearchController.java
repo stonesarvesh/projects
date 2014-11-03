@@ -1,5 +1,6 @@
 package com.leapin.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.leapin.common.CommonUtil;
 import com.leapin.service.ProgramService;
 
 @Controller
@@ -36,7 +38,13 @@ public class SearchController {
 	@RequestMapping("/getPrograms")
 	public @ResponseBody Map<String,Object> getPrograms(HttpServletRequest request) {
 		String query = request.getParameter("query");
-		System.out.println(query);
-		return programService.getPrograms(query);
+		query = CommonUtil.parseInputForSQL(query);
+		Map<String,Object> result = new HashMap<String, Object>(1);
+		if (query.isEmpty()) {
+			result.put("emptyQuery", true);
+		} else {
+			result = programService.getPrograms(query);
+		}
+		return result;
 	}
 }

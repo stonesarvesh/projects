@@ -811,6 +811,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 .ds .details {
 	width: 170px;
 	float: left;
+	height:100px;
 }
 
 .ds > .desc p {
@@ -2258,4 +2259,3 @@ label {
     padding: 0;
     width: 60px;
 }
-

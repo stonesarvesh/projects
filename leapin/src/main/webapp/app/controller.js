@@ -7,6 +7,7 @@
 		var promiss = $http.get("getPrograms",{params: {query: $scope.query}});
 		promiss.success(function(data) {
 			$scope.programs = data.programs;
+			$scope.cities = data.cities;
 		});
 		
 	}]);

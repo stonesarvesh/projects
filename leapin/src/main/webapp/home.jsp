@@ -239,7 +239,23 @@
       </footer>
       <!--footer end-->
   </section>
+<aside>
+	 <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+                  <li class="mt">
+                      <a class="active" href="index.html">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Programs</span>
+                      </a>
+                  </li>
 
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+</aside>
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-1.8.3.min.js"></script>

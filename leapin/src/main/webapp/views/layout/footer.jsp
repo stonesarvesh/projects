@@ -1,7 +1,5 @@
 <div class="text-center">
-	2014 - Alvarez.is <a href="index.html#" class="go-top"> <i
-		class="fa fa-angle-up"></i>
-	</a>
+	copyright 2014
 </div>
 <!-- js placed at the end of the document so the pages load faster -->
 	<script src="assets/js/jquery.js"></script>

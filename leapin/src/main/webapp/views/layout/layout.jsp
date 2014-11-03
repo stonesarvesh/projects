@@ -23,6 +23,7 @@
 
 <!-- Custom styles for this template -->
 <link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/theme.css" rel="stylesheet">
 <link href="assets/css/style-responsive.css" rel="stylesheet">
 
 <script src="assets/js/chart-master/Chart.js"></script>
@@ -35,32 +36,8 @@
 </head>
 
 <body>
-
-	<section id="container">
-		<!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-		<!--header start-->
-		<header class="header black-bg">
-			<tiles:insertAttribute name="header" />
-		</header>
-		<!--header end-->
-		
-
-		<aside>
-			<tiles:insertAttribute name="sidebar" />
-     	 </aside>
-		<!--main content start-->
-		<section id="main-content">
-			<tiles:insertAttribute name="content" />
-		</section>
-
-		<!--main content end-->
-		<!--footer start-->
-		<footer class="site-footer">
-			<tiles:insertAttribute name="footer" />
-		</footer>
-		<!--footer end-->
-	</section>
+	<tiles:insertAttribute name="header" />
+	<tiles:insertAttribute name="content" />
+	<tiles:insertAttribute name="footer" />
 </body>
 </html>
