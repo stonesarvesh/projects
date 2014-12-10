@@ -1,28 +1,37 @@
-<div class="text-center">
-	copyright 2014
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-xs-12">
+				<p>
+					<strong>&copy; Leapin 2014</strong>
+				</p>
+				<p>All rights reserved</p>
+			</div>
+			<div class="col-sm-8 col-xs-12">
+				<p class="footer-links">
+					<a href="home" class="active">Home</a>
+					<a href="contact">Contact Us</a>
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
-<!-- js placed at the end of the document so the pages load faster -->
-	<script src="assets/js/jquery.js"></script>
-	
-	<script src="lib/angular.min.js"></script>
-	<script src="app/controller.js"></script>
-	<script src="app/app.js"></script>
-	
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script class="include" type="text/javascript"
-		src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-	<script src="assets/js/jquery.scrollTo.min.js"></script>
-	<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.sparkline.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="product/js/jquery-1.10.2.min.js"></script>
+<script src="product/bootstrap/js/bootstrap.js"></script>
+<script src="product/js/jquery.flot.js"></script>
+<script src="product/js/dropzone.js"></script>
 
-
-	<!--common script for all pages-->
-	<script src="assets/js/common-scripts.js"></script>
-
-	<script type="text/javascript"
-		src="assets/js/gritter/js/jquery.gritter.js"></script>
-	<script type="text/javascript" src="assets/js/gritter-conf.js"></script>
-
-	<!--script for this page-->
-	<script src="assets/js/sparkline-chart.js"></script>
-	<script src="assets/js/zabuto_calendar.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript"
+	src="product/js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript"
+	src="product/js/fancybox/helpers/jquery.fancybox-buttons.js?v=2.1.5"></script>
+<script type="text/javascript"
+	src="product/js/fancybox/helpers/jquery.fancybox-media.js?v=2.1.5"></script>
+<script src="product/js/global.js"></script>
+<script src="lib/angular.min.js"></script>
+<script src="app/controller.js"></script>
+<script src="app/app.js"></script>
