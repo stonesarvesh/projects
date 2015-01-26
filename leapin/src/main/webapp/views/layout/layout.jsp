@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
-        <title>BootListings - A Bootstrap Classifieds template</title>
+        <title>Leapin - Find your passion</title>
 
         <!-- Bootstrap core CSS -->
         <link id="switch_style" href="product/css/bootstrap.css" rel="stylesheet">
@@ -17,7 +17,7 @@
         <!-- Custom styles for this template -->
         <link href="product/css/theme.css" rel="stylesheet">
         <link href="product/css/dropzone.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<!--         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
         <link rel="stylesheet" type="text/css" href="product/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
         <link rel="stylesheet" type="text/css" href="product/js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
         

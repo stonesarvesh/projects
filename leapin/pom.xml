@@ -206,6 +206,6 @@
 
 	</dependencies>
 	<build>
-		<finalName>academic-search-engine</finalName>
+		<finalName>ROOT</finalName>
 	</build>
 </project>

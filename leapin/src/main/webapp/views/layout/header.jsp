@@ -13,7 +13,7 @@
 			</a>
 
 		</div>
-		<div class="collapse navbar-collapse">
+		<div class="collapse navbar-collapse" style="display:none !important">
 			<ul class="nav navbar-nav navbar-right visible-xs">
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="my_account.html">Login</a></li>

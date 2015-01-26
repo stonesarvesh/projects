@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="warn" name="MyApp" packages="com.mobileum">
+<Configuration status="warn" name="MyApp" packages="com.leapin">
   <Appenders>
-   <RollingFile name="RollingFile" fileName="file:${user.home}/Llogs/application.log" 
-     filePattern="file:${user.home}/Llogs/application-%d{MM-dd-yyyy}.log">
-
-      <PatternLayout>
-        <Pattern>%d %p %c{1.} %m%n</Pattern>
-      </PatternLayout>
-      <TimeBasedTriggeringPolicy />
-    </RollingFile>
-    
-    <Async name="rollingFileAppender">
-      <AppenderRef ref="RollingFile"/>
-    </Async>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%m%n"/>
+    </Console>
   </Appenders>
   <Loggers>
-    <Root level="trace">
-      <AppenderRef ref="rollingFileAppender"/>
+    <Root level="error">
+      <AppenderRef ref="STDOUT"/>
     </Root>
   </Loggers>
 </Configuration>

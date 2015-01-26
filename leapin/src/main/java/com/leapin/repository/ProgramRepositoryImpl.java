@@ -27,7 +27,7 @@ public class ProgramRepositoryImpl implements ProgramRepository {
 	public Map<String,Object> getPrograms(final String query) {
 		String sql = QueryBuilder.searchProgram(query);
 		final Map<String,Object> result = new HashMap<String, Object>();
-		final Set<String> cities = new HashSet<String>();
+		final Set<String> states = new HashSet<String>();
 		final Set<String> levels = new HashSet<String>();
 		final Set<String> types = new HashSet<String>();
 		final List<Program> programs = new ArrayList<Program>();
@@ -40,8 +40,24 @@ public class ProgramRepositoryImpl implements ProgramRepository {
 					String majorCategory = rs.getString("major_category");
 					String instituteName = rs.getString("institute_name");
 					String city = rs.getString("city");
+					String state = rs.getString("state");
 					String level = rs.getString("program_level");
 					String type = rs.getString("program_type");
+					String seats = rs.getString("seats_available");
+					String degree = rs.getString("degree_offered");
+					String duration = rs.getString("duration");
+					String qualification = rs.getString("qualification");
+					String commencement = rs.getString("commencement");
+					String notification = rs.getString("notification");
+					String addmissionProcedure = rs.getString("addmission_procedure");
+					String instituteLink = rs.getString("institute_link");
+					String programLink = rs.getString("program_link");
+					
+					String admissionSyllabus = rs.getString("admission_syllabus");
+					String fee = rs.getString("fee");
+					String accomodation = rs.getString("accomodation");
+					
+					
 					Program program = new Program();
 					program.setCourseName(courseName);
 					program.setCity(city);
@@ -49,12 +65,30 @@ public class ProgramRepositoryImpl implements ProgramRepository {
 					program.setLevel(level);
 					program.setInstituteName(instituteName);
 					program.setMajorCategory(majorCategory);
-					cities.add(city);
-					levels.add(level);
-					types.add(type);
+					
+					program.setAccomodationInfo(accomodation);
+					program.setAdmissionProcedure(addmissionProcedure);
+					program.setAdmissionSyllabus(admissionSyllabus);
+					program.setDegree(degree);
+					program.setDuration(duration);
+					program.setFee(fee);
+					program.setFormNotification(notification);
+					program.setInstituteLink(instituteLink);
+					program.setQualification(qualification);
+					program.setLink(programLink);
+					program.setSeats(seats);
+					program.setSessionCommencement(commencement);
+					program.setState(state);
+					System.out.println(state);
+					if (state != null && !"NFF".equalsIgnoreCase(state) && "".equalsIgnoreCase(state.trim()))
+						states.add(state);
+					if (level != null && !"NFF".equalsIgnoreCase(level) && "".equalsIgnoreCase(level.trim()))
+						levels.add(level);
+					if (type != null && !"NFF".equalsIgnoreCase(type) && "".equalsIgnoreCase(type.trim()))
+						types.add(type);
 					programs.add(program);
 				}
-				result.put("cities", cities);
+				result.put("states", states);
 				result.put("levels", levels);
 				result.put("types", types);
 				result.put("programs", programs);

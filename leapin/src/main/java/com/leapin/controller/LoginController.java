@@ -20,6 +20,10 @@ public class LoginController {
 	public ModelAndView login() {
 		return new ModelAndView("login");
 	}
+	@RequestMapping("/notfound")
+	public String handleResourceNotFoundException() {
+		return "notfound";
+	}
 
 	@RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
 	public ModelAndView loginFailed() {

@@ -51,11 +51,7 @@ public class SearchController {
 		LOGGER.info("IP : " + ipAddress);
 		query = CommonUtil.parseInputForSQL(query);
 		Map<String,Object> result = new HashMap<String, Object>(1);
-		if (query.isEmpty()) {
-			result.put("emptyQuery", true);
-		} else {
-			result = programService.getPrograms(query);
-		}
+		result = programService.getPrograms(query);
 		return result;
 	}
 }
