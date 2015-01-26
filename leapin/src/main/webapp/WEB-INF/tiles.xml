@@ -16,5 +16,8 @@
 	<definition name="searchResult" extends="base">
 		<put-attribute name="content" value="/views/common/searchResult.jsp"/>
 	</definition>
+	<definition name="notfound" extends="base">
+		<put-attribute name="content" value="/views/layout/error404.jsp"/>
+	</definition>
 	
 </tiles-definitions>

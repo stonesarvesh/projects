@@ -38,4 +38,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <servlet-name>dispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+   
+   <error-page>
+   	<error-code>404</error-code>
+   	<location>/notfound</location>
+   </error-page>
 </web-app>

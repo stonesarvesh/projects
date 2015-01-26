@@ -33,5 +33,6 @@
 	src="product/js/fancybox/helpers/jquery.fancybox-media.js?v=2.1.5"></script>
 <script src="product/js/global.js"></script>
 <script src="lib/angular.min.js"></script>
+<script src="lib/dirPagination.js"></script>
 <script src="app/controller.js"></script>
 <script src="app/app.js"></script>

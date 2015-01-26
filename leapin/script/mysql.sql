@@ -19,6 +19,7 @@ create table program (
   reservation varchar(200) default 'NA' ,
   fee varchar(50) default 'NA' ,
   accomodation varchar(100) default 'NA'
-);
+)  ENGINE=InnoDB;
 
+--mysql --local-infile -uroot -pyourpwd yourdbname
 ALTER TABLE program ADD FULLTEXT (course_name,major_category,institute_name,program_level,degree_offered,program_type,city,state);
