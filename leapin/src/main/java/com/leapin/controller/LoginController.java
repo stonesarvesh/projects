@@ -24,6 +24,21 @@ public class LoginController {
 	public String handleResourceNotFoundException() {
 		return "notfound";
 	}
+	
+	@RequestMapping("/aboutus")
+	public String aboutUs() {
+		return "aboutus";
+	}
+	
+	@RequestMapping("/contactus")
+	public String contactUs() {
+		return "contactus";
+	}
+	
+	@RequestMapping("/myaccount")
+	public String myAccount() {
+		return "myaccount";
+	}
 
 	@RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
 	public ModelAndView loginFailed() {

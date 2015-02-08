@@ -1,4 +1,4 @@
-<div class="jumbotron home-tron-search well ">
+<div class="jumbotron home-tron-search well " >
 	<div class="container" ng-init="query = '${query}'">
 		<div class="row" ng-controller="SearchController">
 
@@ -108,9 +108,8 @@
 				<div class="pull-left">
 					<strong>{{filteredPrograms.length}} result(s) found</strong>
 				</div>
-
 			</div>
-			<div dir-paginate="program in filteredPrograms | itemsPerPage: 5"
+			<div dir-paginate="program in filteredPrograms | itemsPerPage: 15"
 				class="row premium listing-row">
 
 				<div class="col-sm-2">
@@ -223,7 +222,7 @@
 					</p>
 					<p>
 						<strong> Institute website : </strong>
-						{{detailsProgram.instituteLink}}
+						<a href="{{detailsProgram.instituteLink}}">{{detailsProgram.instituteLink}}</a> 
 					</p>
 				</div>
 			</div>

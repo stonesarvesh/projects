@@ -1,11 +1,10 @@
+<!-- Page Content -->
+<div class="container">
 
-<div class="jumbotron home-search" style="">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<br />
-				<p class="main_description">Requested page not found</p>
-			</div>
-		</div>
-	</div>
+	<!-- Jumbotron Header -->
+	<header class="jumbotron">
+		<h2 style="margin-top: 0px; margin-bottom: 10px">Page not found</h2>
+		<p>The requested page/resource not found. Please contact administrator for any query/support</p>
+
+	</header>
 </div>

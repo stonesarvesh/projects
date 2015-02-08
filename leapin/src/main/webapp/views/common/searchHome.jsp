@@ -46,13 +46,8 @@
 	</div>
 </div>
 <div class="container">
-
-
-
 	<div class="row">
-
 		<div class="col-sm-12 col-md-8">
-
 			<div class="row directory">
 				<div class="col-sm-12 ">
 					<h2>
@@ -481,35 +476,30 @@
 					<div class="panel panel-default">
 
 
-						<div class="panel-body" style="height: 102px; display: block;">
-
+						<div class="panel-body" style="height: 50px; display: block;">
 							<div class="fb-like"
-								data-href="https://developers.facebook.com/docs/plugins/"
-								data-width="265" data-layout="standard" data-action="like"
-								data-show-faces="false" data-share="false"
+								data-href="https://www.facebook.com/pages/Leapinin/844678045574737?fref=ts"
+								data-width="265" data-layout="button_count" data-action="like"
+								data-show-faces="true" data-share="false"
 								style="display: block; height: 30px;"></div>
 							<br />
-							<!-- Place this tag where you want the +1 button to render. -->
-							<div class="g-plusone" data-annotation="inline" data-width="300"
-								style="display: block; height: 30px;">leapin</div>
-
-							<!-- Place this tag after the last +1 button tag. -->
-							<script type="text/javascript">
-								(function() {
-									var po = document.createElement('script');
-									po.type = 'text/javascript';
-									po.async = true;
-									po.src = 'https://apis.google.com/js/platform.js';
-									var s = document
-											.getElementsByTagName('script')[0];
-									s.parentNode.insertBefore(po, s);
-								})();
-							</script>
+						<div id="fb-root"></div>
+						<script>
+							(function(d, s, id) {
+								var js, fjs = d.getElementsByTagName(s)[0];
+								if (d.getElementById(id))
+									return;
+								js = d.createElement(s);
+								js.id = id;
+								js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+								fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));
+						</script>
 						</div>
 						<div class="panel-footer" style>
-							<a href="https://twitter.com/leapindotin"
+							<a href="https://twitter.com/Leap__in"
 								class="twitter-follow-button" data-dnt="true">Follow
-								@leapindotin</a>
+								@Leap</a>
 							<script>
 								!function(d, s, id) {
 									var js, fjs = d.getElementsByTagName(s)[0];
