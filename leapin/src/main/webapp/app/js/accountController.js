@@ -5,6 +5,7 @@
 			'$filter', function($scope, $rootScope, $http, $filter) {
 
 				$scope.currentTab = 0;
+				$scope.
 
 				$scope.showMyProfileTab = function() {
 					$scope.currentTab = 0;

@@ -32,6 +32,13 @@ body {
   margin: 20px 0;
 }
 
+.bg-grey {
+	background-color: #e6e6e6;
+}
+.bg-none {
+	
+}
+
 #footer > .container {
   padding-left: 15px;
   padding-right: 15px;

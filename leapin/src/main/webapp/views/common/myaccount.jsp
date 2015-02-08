@@ -9,10 +9,10 @@
 							<div class="panel-heading">My account</div>
 							<div class="panel-body">
 								<ul class="nav">
-									<li><a class="active" ng-click="showMyProfileTab()">My
+									<li ng-class="{ 'bg-grey': currentTab == 0 ,'none' : currentTab != 0}"><a class="active " href ng-click="showMyProfileTab()">My
 											Profile</a></li>
 									<sec:authorize access="hasRole('admin')">
-										<li><a class="active" href ng-click="showNotificationTab()">Create
+										<li ng-class="{ 'bg-grey': currentTab == 1 ,'none' : currentTab != 1}"><a class="active" href ng-click="showNotificationTab()">Create
 												New Notification</a></li>
 									</sec:authorize>
 								</ul>
