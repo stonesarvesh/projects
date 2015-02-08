@@ -53,3 +53,15 @@ create table notification (
 	updated_on date,
 	updated_by integer
 );
+
+create table notification_category (
+	id integer primary key AUTO_INCREMENT,
+	name varchar(50)
+);
+
+insert into notification_category (name) values ('Banking');
+insert into notification_category (name) values ('Railway');
+insert into notification_category (name) values ('Education');
+insert into notification_category (name) values ('PSU');
+insert into notification_category (name) values ('SSC');
+insert into notification_category (name) values ('UPSC');
