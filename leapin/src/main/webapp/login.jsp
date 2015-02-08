@@ -40,6 +40,10 @@
 						${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
 					</div>
 				</c:if>
+				${SPRING_SECURITY_LAST_EXCEPTION}
+				<c:if test="${not empty SPRING_SECURITY_LAST_EXCEPTION.message}">
+		            <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}" />
+		        </c:if>
 				<div class="modal-body">
 					<form class="form col-md-12 center-block"
 						action="<c:url value='j_spring_security_check' />" method='POST'>
