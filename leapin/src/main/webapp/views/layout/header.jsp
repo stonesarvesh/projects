@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -19,6 +19,10 @@
 <!-- 				<li><a href="register.html">Register</a></li> -->
 <!-- 				<li><a href="listings.html">Listings</a></li> -->
 				<li><a href="myaccount">My account</a></li>
+				<sec:authorize access="isAuthenticated()">
+					<li><a href="myaccount">Logout</a></li>
+				</sec:authorize>
+				
 <!-- 				<li><a href="account_ad_create.html">Post an ad</a></li> -->
 			</ul>
 			<div class="nav navbar-nav navbar-right hidden-xs">
@@ -29,6 +33,10 @@
 <!-- 						| <a href="register.html">Register</a> -->
 <!-- 						| -->
 						 <a href="myaccount">My account</a> 
+						 <sec:authorize access="isAuthenticated()">
+						| <a href="j_spring_security_logout">Logout</a>
+				</sec:authorize>
+						 
 
 					</div>
 				</div>

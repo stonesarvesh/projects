@@ -11,6 +11,7 @@
 						<div class="col-md-11 col-sm-12">
 							<div class="well">
 								<h2>Sign in</h2>
+								${SPRING_SECURITY_LAST_EXCEPTION.message}
 								<p>If you have an account with us, please log in.</p>
 
 
@@ -27,7 +28,13 @@
 <!-- 										<label> <input type="checkbox"> Remember me -->
 <!-- 										</label> -->
 <!-- 									</div> -->
-									<br /> <button type="submit" class="btn btn-primary pull-right">Login</button>
+									<br />
+									<div class="row">
+										<div class="col-md-6"></div>
+										<div class="col-md-6">
+											<button type="submit" class="btn btn-primary pull-right">Login</button>
+										</div>
+									</div>
 								</form>
 
 							</div>
@@ -72,7 +79,7 @@
 				<p>If you have an account with us, please enter your details
 					below.</p>
 
-				<form method="POST" action="account_dashboard.html"
+				<form method="POST" action="j_spring_security_check"
 					accept-charset="UTF-8" id="user-login-form" class="form ajax"
 					data-replace=".error-message p">
 

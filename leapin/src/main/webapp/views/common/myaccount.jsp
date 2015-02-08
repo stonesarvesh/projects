@@ -1,3 +1,4 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-3">
@@ -16,9 +17,9 @@
 <!-- 											account</a></li> -->
 <!-- 									<li><a class="active" href="account_ads.html">Manage -->
 <!-- 											ads</a></li> -->
-									<sec:authorize access="hasRole('ROLE_ADMIN')">
-									<li><a class="active" href="account_ad_create.html">Create
-											New Notification</a></li>
+									<sec:authorize access="hasRole('admin')">
+										<li><a class="active" href="account_ad_create.html">Create
+												New Notification</a></li>
 									</sec:authorize>
 								</ul>
 
