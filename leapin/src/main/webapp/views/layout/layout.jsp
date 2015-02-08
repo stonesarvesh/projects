@@ -20,19 +20,31 @@
 <!--         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
         <link rel="stylesheet" type="text/css" href="product/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
         <link rel="stylesheet" type="text/css" href="product/js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
-        
+        <link href="app/app.css" rel="stylesheet">
+          <!-- Custom CSS -->
+    	<link href="app/heroic-features.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="../../assets/js/html5shiv.js"></script>
         <script src="../../assets/js/respond.min.js"></script>
+        
+        
         <![endif]-->
     </head>
 
     
 
 <body>
-	<tiles:insertAttribute name="header" />
-	<tiles:insertAttribute name="content" />
-	<tiles:insertAttribute name="footer" />
+	<div id="wrap">
+		<div id="header">
+			<tiles:insertAttribute name="header" />
+		</div>
+		<div id="content">
+			<tiles:insertAttribute name="content" />
+		</div>
+	</div>
+	<div id="footer">
+		<tiles:insertAttribute name="footer" />
+	</div>
 </body>
 </html>

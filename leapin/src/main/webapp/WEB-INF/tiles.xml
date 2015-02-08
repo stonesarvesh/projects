@@ -9,8 +9,12 @@
 		<put-attribute name="footer" value="/views/layout/footer.jsp" />
 	</definition>
 	
-	<definition name="home" extends="base">
+	<definition name="coursetrends" extends="base">
 		<put-attribute name="content" value="/views/common/searchHome.jsp"/>
+	</definition>
+	
+	<definition name="home" extends="base">
+		<put-attribute name="content" value="/views/common/home.jsp"/>
 	</definition>
 	
 	<definition name="searchResult" extends="base">
@@ -18,6 +22,21 @@
 	</definition>
 	<definition name="notfound" extends="base">
 		<put-attribute name="content" value="/views/layout/error404.jsp"/>
+	</definition>
+	
+	<definition name="aboutus" extends="base">
+		<put-attribute name="content" value="/views/layout/aboutus.jsp"/>
+	</definition>
+	<definition name="contactus" extends="base">
+		<put-attribute name="content" value="/views/layout/contactus.jsp"/>
+	</definition>
+	
+	<definition name="login" extends="base">
+		<put-attribute name="content" value="/views/common/login.jsp"/>
+	</definition>
+	
+	<definition name="myaccount" extends="base">
+		<put-attribute name="content" value="/views/common/myaccount.jsp"/>
 	</definition>
 	
 </tiles-definitions>

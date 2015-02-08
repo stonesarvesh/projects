@@ -25,9 +25,9 @@ public class SearchController {
 	@Autowired
 	private ProgramService programService;
 	
-	@RequestMapping("/home")
+	@RequestMapping("/coursetrends")
 	public String home(){
-		return "search";
+		return "coursetrends";
 	}
 	
 	@RequestMapping("/search")

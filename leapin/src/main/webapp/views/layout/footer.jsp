@@ -3,14 +3,15 @@
 		<div class="row">
 			<div class="col-sm-4 col-xs-12">
 				<p>
-					<strong>&copy; Leapin 2014</strong>
+					<strong>&copy; Leapin 2014</strong> All rights reserved
 				</p>
-				<p>All rights reserved</p>
+				
 			</div>
 			<div class="col-sm-8 col-xs-12">
 				<p class="footer-links">
 					<a href="home" class="active">Home</a>
-					<a href="contact">Contact Us</a>
+					<a href="aboutus" class="active">About Us</a>
+					<a href="contactus">Contact Us</a>
 				</p>
 			</div>
 		</div>

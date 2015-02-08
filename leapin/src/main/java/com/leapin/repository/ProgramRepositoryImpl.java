@@ -79,12 +79,11 @@ public class ProgramRepositoryImpl implements ProgramRepository {
 					program.setSeats(seats);
 					program.setSessionCommencement(commencement);
 					program.setState(state);
-					System.out.println(state);
-					if (state != null && !"NFF".equalsIgnoreCase(state) && "".equalsIgnoreCase(state.trim()))
+					if (state != null && !"NFF".equalsIgnoreCase(state) && !"".equalsIgnoreCase(state.trim()))
 						states.add(state);
-					if (level != null && !"NFF".equalsIgnoreCase(level) && "".equalsIgnoreCase(level.trim()))
+					if (level != null && !"NFF".equalsIgnoreCase(level) && !"".equalsIgnoreCase(level.trim()))
 						levels.add(level);
-					if (type != null && !"NFF".equalsIgnoreCase(type) && "".equalsIgnoreCase(type.trim()))
+					if (type != null && !"NFF".equalsIgnoreCase(type) && !"".equalsIgnoreCase(type.trim()))
 						types.add(type);
 					programs.add(program);
 				}
