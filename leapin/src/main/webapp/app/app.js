@@ -1,4 +1,4 @@
 ( function () {
-	var app = angular.module("leapin", ['app.controller','angularUtils.directives.dirPagination']);
+	var app = angular.module("leapin", ['app.controller','angularUtils.directives.dirPagination', 'app.admin']);
 })();
 

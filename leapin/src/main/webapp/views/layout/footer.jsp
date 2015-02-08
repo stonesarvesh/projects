@@ -37,3 +37,4 @@
 <script src="lib/dirPagination.js"></script>
 <script src="app/controller.js"></script>
 <script src="app/app.js"></script>
+<script src="app/js/accountController.js"></script>

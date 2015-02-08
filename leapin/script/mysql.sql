@@ -23,24 +23,22 @@ create table program (
 
 --mysql --local-infile -uroot -pyourpwd yourdbname
 ALTER TABLE program ADD FULLTEXT (course_name,major_category,institute_name,program_level,degree_offered,program_type,city,state);
-
 CREATE  TABLE users (
-  userid integer not null primary key AUTO_INCREMENT,
+  user_id integer not null primary key AUTO_INCREMENT,
   name varchar(50) not null,
-  username VARCHAR(45) NOT NULL ,
+  user_name VARCHAR(45) NOT NULL ,
   password VARCHAR(300) NOT NULL ,
-  enabled TINYINT NOT NULL DEFAULT 1 ,
-  PRIMARY KEY (username)
+  enabled TINYINT NOT NULL DEFAULT 1
  );
  
  CREATE TABLE user_roles (
   user_role_id INT(11) NOT NULL AUTO_INCREMENT,
-  userid integer NOT NULL,
+  user_id integer NOT NULL,
   ROLE VARCHAR(45) NOT NULL,
   PRIMARY KEY (user_role_id),
-  UNIQUE KEY uni_username_role (ROLE,username),
-  KEY fk_username_idx (username),
-  CONSTRAINT fk_userid FOREIGN KEY (userid) REFERENCES users (userid)
+  UNIQUE KEY uni_username_role (ROLE,user_id),
+  KEY fk_username_idx (user_id),
+  CONSTRAINT fk_userid FOREIGN KEY (user_id) REFERENCES users (user_id)
   );
 
 create table notification (
@@ -54,4 +52,4 @@ create table notification (
 	created_by integer,
 	updated_on date,
 	updated_by integer
-)
+);
