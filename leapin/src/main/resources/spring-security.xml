@@ -16,7 +16,7 @@
 		<form-login login-page="/login" default-target-url="/myaccount"
 			authentication-failure-url="/login?error=true" username-parameter="username"
 			password-parameter="password" />
-		<logout logout-success-url="/home" />
+		<logout logout-success-url="/home" invalidate-session="true"/>
 		<!-- enable csrf protection -->
 	</http>
 
