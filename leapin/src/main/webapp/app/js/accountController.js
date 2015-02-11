@@ -14,6 +14,7 @@
 					
 				};
 				
+				$scope.notification = {};
 				$scope.notificationCategories = {};
 				
 				var promiss = $http.get("getNotificationCategories");

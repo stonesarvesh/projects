@@ -70,8 +70,9 @@
 										</div>
 										<div class="col-sm-6">
 
-											<select id="category" class="form-control " name="category" ng-model="notification.category">
-												<option value="0">Choose a category</option>
+											<select id="category" class="form-control " name="category"
+											ng-init="notification.category = notification.category || '0'"  ng-model="notification.category">
+												<option value="0" selected>--Choose a category--</option>
 												<option value="{{key}}" ng-repeat="(key,value) in notificationCategories">{{value}}</option>
 											</select>
 										</div>
