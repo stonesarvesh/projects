@@ -29,7 +29,7 @@ public class QueryBuilder {
 	public static String insertNotification(Map<String,Object> notification) {
 		StringBuilder query = new StringBuilder();
 		query.append("insert into notification (title,eligibility,description,links,issue_date, ")
-			.append(" end_date,created_on,created_by,updated_on,updated_by)")
+			.append(" end_date,created_on,created_by,updated_on,updated_by, category)")
 			.append(" values ('").append(notification.get("title")).append("','")
 			.append(notification.get("eligibility")).append("','")
 			.append(notification.get("description")).append("','")
@@ -38,8 +38,9 @@ public class QueryBuilder {
 			.append(notification.get("enddate")).append("','")
 			.append(new SimpleDateFormat("yyyy-dd-MM").format(new Date())).append("',")
 			.append(1).append(",'")
-			.append(new SimpleDateFormat("yyyy-dd-MM").format(new Date())).append("',")
-			.append(1).append(")");
+			.append(new SimpleDateFormat("yyyy-dd-MM").format(new Date())).append("','")
+			.append(1).append("',")
+			.append(notification.get("category")).append(")");
 		return query.toString();
 	}
 }
