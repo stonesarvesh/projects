@@ -17,4 +17,8 @@ public class AdminServiceImpl implements AdminService{
 		return adminRepository.getNotificationCategories();
 	}
 
+	public Boolean saveNotifiation(Map<String, Object> notification) {
+		return adminRepository.saveNotification(notification);
+	}
+
 }

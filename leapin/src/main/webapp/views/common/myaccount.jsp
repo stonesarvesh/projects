@@ -69,7 +69,6 @@
 											<label>Category</label>
 										</div>
 										<div class="col-sm-6">
-
 											<select id="category" class="form-control " name="category"
 											ng-init="notification.category = notification.category || '0'"  ng-model="notification.category">
 												<option value="0" selected>--Choose a category--</option>
@@ -98,12 +97,12 @@
 								</div>
 								<div class="col-sm-12">
 									<br /> <label>Description </label>
-									<textarea  ng-model="notification.descritpion" class="form-control col-sm-8 expand" rows="6"
+									<textarea  ng-model="notification.description" class="form-control col-sm-8 expand" rows="6"
 										style="width: 99%"></textarea>
 								</div>
 								<div class="col-sm-6">
 									<br /> <label>Start Date </label>
-									<div class='input-group date' id='startdatepicker'>
+									<div class='input-group date' >
 										<input type='text' class="form-control"  ng-model="notification.startdate" /> <span
 											class="input-group-addon"><span
 											class="glyphicon glyphicon-calendar"></span> </span>
@@ -111,7 +110,7 @@
 								</div>
 								<div class="col-sm-6">
 									<br /> <label>End Date </label> 
-									<div class='input-group date' id='enddatepicker'>
+									<div class='input-group date' >
 										<input type='text' class="form-control" ng-model="notification.enddate" /> <span
 											class="input-group-addon"><span
 											class="glyphicon glyphicon-calendar"></span> </span>
@@ -122,7 +121,11 @@
 										class="form-control ">
 								</div>
 								<div class="col-sm-12">
-								 <br /><a href ng-click="saveNotification()" class="btn btn-primary pull-right"><i class="icon-ok"></i>  Publish Notification</a>
+								
+								 <br />
+								 <div class="" id="successMessage" style="display: none">Notification saved successfuly.</div>
+								 <div class="" id="errorMessage" style="display: none">Internal server error.</div>
+								 <a href ng-click="saveNotification()" class="btn btn-primary pull-right"><i class="icon-ok"></i>  Publish Notification</a>
 								</div>
 							</div>
 

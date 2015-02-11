@@ -1,5 +1,9 @@
 package com.leapin.model;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
+
 public class QueryBuilder {
 
 	public static String searchProgram(String query) {
@@ -19,6 +23,23 @@ public class QueryBuilder {
 	public static String queryForNotificationCategories() {
 		StringBuilder query = new StringBuilder();
 		query.append("select id, name from notification_category order by name ");
+		return query.toString();
+	}
+	
+	public static String insertNotification(Map<String,Object> notification) {
+		StringBuilder query = new StringBuilder();
+		query.append("insert into notification (title,eligibility,description,links,issue_date, ")
+			.append(" end_date,created_on,created_by,updated_on,updated_by)")
+			.append(" values ('").append(notification.get("title")).append("','")
+			.append(notification.get("eligibility")).append("','")
+			.append(notification.get("description")).append("','")
+			.append(notification.get("links")).append("','")
+			.append(notification.get("startdate")).append("','")
+			.append(notification.get("enddate")).append("','")
+			.append(new SimpleDateFormat("yyyy-dd-MM").format(new Date())).append("',")
+			.append(1).append(",'")
+			.append(new SimpleDateFormat("yyyy-dd-MM").format(new Date())).append("',")
+			.append(1).append(")");
 		return query.toString();
 	}
 }

@@ -6,4 +6,5 @@ public interface AdminService {
 	
 	Map<Integer,String> getNotificationCategories();
 
+	Boolean saveNotifiation(Map<String,Object> notification);
 }

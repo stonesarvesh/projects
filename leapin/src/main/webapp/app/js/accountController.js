@@ -14,7 +14,6 @@
 					
 				};
 				
-				$scope.notification = {};
 				$scope.notificationCategories = {};
 				
 				var promiss = $http.get("getNotificationCategories");
@@ -34,7 +33,18 @@
 				
 				$scope.notification = {};
 				$scope.saveNotification = function () {
-					
+					console.log($scope.notificationCategories);
+					$j("#successMessage").hide();
+					$j("#errorMessage").hide();
+					$http.post("saveNotification", $scope.notification).success(function(result) {
+						if (result) {
+							$j("#successMessage").show();
+						} else {
+							$j("#errorMessage").show();
+						}
+					}).error(function () {
+						$j("#errorMessage").show();
+					});
 				}
 				
 			} ]);

@@ -34,4 +34,10 @@ public class AdminRepositoryImpl implements AdminRepository{
 		return result;
 	}
 
+	public Boolean saveNotification(Map<String, Object> notification) {
+		String query = QueryBuilder.insertNotification(notification);
+		jdbcTemplate.update(query);
+		return true;
+	}
+
 }
