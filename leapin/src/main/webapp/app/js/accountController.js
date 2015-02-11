@@ -11,7 +11,30 @@
 
 				$scope.showNotificationTab = function() {
 					$scope.currentTab = 1;
+					
 				};
-
+				
+				$scope.notificationCategories = {};
+				
+				var promiss = $http.get("getNotificationCategories");
+				promiss.success(function(data) {
+					$scope.notificationCategories = data;
+				});
+				
+				$j('#startdatepicker').datetimepicker({
+				    pickTime: false
+				  });
+				$j('#enddatepicker').datetimepicker({
+					      pickTime: false
+				  });
+				
+				
+				//Notifications
+				
+				$scope.notification = {};
+				$scope.saveNotification = function () {
+					
+				}
+				
 			} ]);
 })(jQuery);

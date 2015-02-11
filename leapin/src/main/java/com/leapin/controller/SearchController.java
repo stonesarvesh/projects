@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.leapin.common.CommonUtil;
+import com.leapin.service.AdminService;
 import com.leapin.service.ProgramService;
 
 @Controller
@@ -24,6 +25,9 @@ public class SearchController {
 	Logger LOGGER = LogManager.getLogger(SearchController.class.getName());
 	@Autowired
 	private ProgramService programService;
+	
+	@Autowired
+	private AdminService adminService;
 	
 	@RequestMapping("/coursetrends")
 	public String home(){
@@ -54,4 +58,10 @@ public class SearchController {
 		result = programService.getPrograms(query);
 		return result;
 	}
+	
+	@RequestMapping("/getNotificationCategories")
+	public @ResponseBody Map<Integer,String> getNotificationCategories(){
+		return adminService.getNotificationCategories();
+	}
+	
 }

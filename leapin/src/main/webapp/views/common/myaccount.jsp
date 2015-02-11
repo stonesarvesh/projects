@@ -24,7 +24,7 @@
 			</div>
 		</div>
 
-		<div class="col-sm-9" id="myProfileSection" ng-if="currentTab == 0">
+		<div class="col-sm-9" id="myProfileSection" ng-show="currentTab == 0">
 			<div class="panel panel-default">
 				<div class="panel-heading">My Profile</div>
 				<div class="panel-body">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-9" id="notificationSection" ng-if="currentTab == 1">
+		<div class="col-sm-9" id="notificationSection" ng-show="currentTab == 1">
 			<form class="form-vertical" action="">
 				<div class="panel panel-default">
 					<div class="panel-heading">Choose category</div>
@@ -70,8 +70,9 @@
 										</div>
 										<div class="col-sm-6">
 
-											<select id="category" class="form-control " name="category">
-												<option value="">Choose a category</option>
+											<select id="category" class="form-control " name="category" ng-model="notification.category">
+												<option value="0">Choose a category</option>
+												<option value="{{key}}" ng-repeat="(key,value) in notificationCategories">{{value}}</option>
 											</select>
 										</div>
 									</div>
@@ -82,22 +83,45 @@
 				</div>
 
 				<div class="panel panel-default">
-					<div class="panel-heading">Ad details</div>
+					<div class="panel-heading">Details</div>
 					<div class="panel-body">
 						<div class="form-group">
 							<div class="row">
 								<div class="col-sm-12">
-									<label>Title </label> <input type="text" class="form-control ">
+									<label>Title </label> <input ng-model="notification.title" type="text" class="form-control ">
+								</div>
+								<div class="col-sm-12">
+									<br /> <label>Eligibility </label>
+									<textarea  ng-model="notification.eligibility" class="form-control col-sm-8 expand" rows="6"
+										style="width: 99%"></textarea>
 								</div>
 								<div class="col-sm-12">
 									<br /> <label>Description </label>
-									<textarea class="form-control col-sm-8 expand" rows="6"
+									<textarea  ng-model="notification.descritpion" class="form-control col-sm-8 expand" rows="6"
 										style="width: 99%"></textarea>
 								</div>
-
+								<div class="col-sm-6">
+									<br /> <label>Start Date </label>
+									<div class='input-group date' id='startdatepicker'>
+										<input type='text' class="form-control"  ng-model="notification.startdate" /> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-calendar"></span> </span>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<br /> <label>End Date </label> 
+									<div class='input-group date' id='enddatepicker'>
+										<input type='text' class="form-control" ng-model="notification.enddate" /> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-calendar"></span> </span>
+									</div>
+								</div>
 								<div class="col-sm-12">
-									<br /> <label>Keywords</label> <input type="text"
+									<br /> <label>Links</label> <input type="text" ng-model="notification.links"
 										class="form-control ">
+								</div>
+								<div class="col-sm-12">
+								 <br /><a href ng-click="saveNotification()" class="btn btn-primary pull-right"><i class="icon-ok"></i>  Publish Notification</a>
 								</div>
 							</div>
 

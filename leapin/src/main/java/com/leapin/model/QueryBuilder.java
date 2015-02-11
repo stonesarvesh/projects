@@ -15,4 +15,10 @@ public class QueryBuilder {
     
 		return queryBuilder.toString();
 	}
+	
+	public static String queryForNotificationCategories() {
+		StringBuilder query = new StringBuilder();
+		query.append("select id, name from notification_category order by name ");
+		return query.toString();
+	}
 }

@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="product/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
         <link rel="stylesheet" type="text/css" href="product/js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
         <link href="app/app.css" rel="stylesheet">
+        <link href="lib/bootstrap-datetimepicker.min.css" rel="stylesheet">
           <!-- Custom CSS -->
     	<link href="app/heroic-features.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

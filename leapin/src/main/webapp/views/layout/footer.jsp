@@ -25,6 +25,12 @@
 <script src="product/js/jquery.flot.js"></script>
 <script src="product/js/dropzone.js"></script>
 
+
+<script type="text/javascript" src="lib/moment.js"></script>
+<script type="text/javascript" src="lib/transition.js"></script>
+<script type="text/javascript" src="lib/collapse.js"></script>
+<script type="text/javascript" src="lib/bootstrap-datetimepicker.min.js"></script>
+
 <!-- Add fancyBox main JS and CSS files -->
 <script type="text/javascript"
 	src="product/js/fancybox/jquery.fancybox.js?v=2.1.5"></script>

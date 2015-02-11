@@ -44,6 +44,7 @@ CREATE  TABLE users (
 create table notification (
 	id integer primary key AUTO_INCREMENT,
 	title text not null,
+	eligibility text not null,
 	description text,
 	links varchar(500),
 	issue_date date,
